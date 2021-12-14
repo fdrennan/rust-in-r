@@ -2,4 +2,7 @@
 
 export(add_float)
 export(hello_world)
+export(my_sum)
+export(return_obj)
+export(return_vec)
 useDynLib(rustr, .registration = TRUE)
