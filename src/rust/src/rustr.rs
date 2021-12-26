@@ -1,7 +1,5 @@
 use extendr_api::prelude::*;
 use extendr_api::RType::String;
-use extendr_api::prelude::*;
-
 use polars::frame::DataFrame;
 use polars::prelude::Float64Type;
 use polars::prelude::Result as PolarResult;
@@ -33,7 +31,7 @@ pub fn feature_and_target(
     let predictor_names = predictor_names
         .into_iter()
         .map(|i| i.to_string() + ", ")
-        .collect::<std::string::Stringz>();
+        .collect::<std::string::String>();
     println!("...using features {:?}", predictor_names);
     (predictors, target)
 }
@@ -62,6 +60,7 @@ pub fn convert_features_to_matrix(in_df: &DataFrame) -> Result<DenseMatrix<f64>>
 }
 
 /// execute_lr
+/// TODO execute_lf
 /// @export
 #[extendr]
 pub fn execute_lr() {

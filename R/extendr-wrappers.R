@@ -33,6 +33,7 @@ my_sum <- function(v) .Call(wrap__my_sum, v)
 pass_string <- function(text) .Call(wrap__pass_string, text)
 
 #' execute_lr
+#' TODO execute_lf
 #' @export
 execute_lr <- function() invisible(.Call(wrap__execute_lr))
 
