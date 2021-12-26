@@ -28,3 +28,11 @@ return_obj <- function(x) .Call(wrap__return_obj, x)
 #' @export
 my_sum <- function(v) .Call(wrap__my_sum, v)
 
+#' pass_string
+#' @export
+pass_string <- function(text) .Call(wrap__pass_string, text)
+
+#' execute_lr
+#' @export
+execute_lr <- function() invisible(.Call(wrap__execute_lr))
+
